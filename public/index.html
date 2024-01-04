@@ -1,1 +1,45 @@
-<h1>hello world bro</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* You can add your own CSS styles here */
+    #clock {
+      font-family: Arial, sans-serif;
+      font-size: 48px;
+      color: black;
+      text-align: center;
+    }
+  </style>
+  <script>
+    // This function updates the clock every second
+    function updateClock() {
+      // Get the current date and time
+      var date = new Date();
+      // Get the hours, minutes and seconds
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var seconds = date.getSeconds();
+      // Format the hours, minutes and seconds
+      if (hours < 10) {
+        hours = "0" + hours;
+      }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+      // Display the clock
+      var clock = document.getElementById("clock");
+      clock.innerHTML = hours + ":" + minutes + ":" + seconds;
+    }
+    // Call the updateClock function once at the start
+    updateClock();
+    // Set a timer to call the updateClock function every second
+    setInterval(updateClock, 1000);
+  </script>
+</head>
+<body>
+  <div id="clock"></div>
+</body>
+</html>
