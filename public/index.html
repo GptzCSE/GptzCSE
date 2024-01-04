@@ -1,45 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    /* You can add your own CSS styles here */
-    #clock {
-      font-family: Arial, sans-serif;
-      font-size: 48px;
-      color: black;
-      text-align: center;
-    }
-  </style>
-  <script>
-    // This function updates the clock every second
-    function updateClock() {
-      // Get the current date and time
-      var date = new Date();
-      // Get the hours, minutes and seconds
-      var hours = date.getHours();
-      var minutes = date.getMinutes();
-      var seconds = date.getSeconds();
-      // Format the hours, minutes and seconds
-      if (hours < 10) {
-        hours = "0" + hours;
-      }
-      if (minutes < 10) {
-        minutes = "0" + minutes;
-      }
-      if (seconds < 10) {
-        seconds = "0" + seconds;
-      }
-      // Display the clock
-      var clock = document.getElementById("clock");
-      clock.innerHTML = hours + ":" + minutes + ":" + seconds;
-    }
-    // Call the updateClock function once at the start
-    updateClock();
-    // Set a timer to call the updateClock function every second
-    setInterval(updateClock, 1000);
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <div id="clock"></div>
+
+<header>
+    <h1>College Name</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home">
+        <h2>Welcome to College Name</h2>
+        <p>Discover a world of education and opportunities.</p>
+        <!-- Add more content for the home section -->
+    </section>
+
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <ul>
+            <li>Course 1</li>
+            <li>Course 2</li>
+            <!-- Add more courses as needed -->
+        </ul>
+    </section>
+
+    <!-- Add more sections for different parts of your website -->
+</main>
+
+<footer>
+    <p>&copy; 2024 College Name. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
